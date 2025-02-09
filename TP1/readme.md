@@ -12,27 +12,27 @@ Ce projet consiste en la création d'un site web éducatif sur l'alimentation et
 1. **index.html** : Page d'accueil
    - Informations générales sur le nombre de repas quotidiens
    - Conseils sur la répartition des repas
-   ![gabari](TP1\img\Screenshot 2025-02-09 202347.png)
+   ![gabari](TP1/img/Screenshot 2025-02-09 202347.png)
 2. **petit-dejeuner.html** : Page sur le petit déjeuner
    - Importance du petit déjeuner
    - Composition recommandée
    - Conseils pratiques
-  ![gabari](TP1\img\Screenshot 2025-02-09 202423.png)
+  ![gabari](TP1/img/Screenshot 2025-02-09 202423.png)
 3. **dejeuner.html** : Page sur le déjeuner
    - Différentes situations de déjeuner
    - Conseils pour manger à l'extérieur
    - Solutions rapides et équilibrées
-   ![gabari](TP1\img\Screenshot 2025-02-09 202505.png)
+   ![gabari](TP1/img/Screenshot 2025-02-09 202505.png)
 4. **diner.html** : Page sur le dîner
    - Recommandations pour le repas du soir
    - Idées de repas simples
    - Conseils pour les sorties au restaurant
-   ![gabari](TP1\img\Screenshot 2025-02-09 202545.png)
+   ![gabari](TP1/img/Screenshot 2025-02-09 202545.png)
 5. **gabarit.html** : Template de base
    - Structure commune à toutes les pages
    - Éléments de navigation
    - Layout principal
-    ![gabari](TP1\img\Screenshot 2025-02-09 202225.png)
+    ![gabari](TP1/img/Screenshot 2025-02-09 202225.png)
 
 
 ## Structure Technique
