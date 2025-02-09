@@ -22,7 +22,7 @@ Ce projet consiste en la création d'un site web éducatif sur l'alimentation et
    - Différentes situations de déjeuner
    - Conseils pour manger à l'extérieur
    - Solutions rapides et équilibrées
-   ![gabari](TP1/img/Screenshot 2025-02-09 202505.png)
+   ![gabari](C:\Users\HP\OneDrive\Bureau\tech_web\TP1\img\Screenshot 2025-02-09 202225.png)
 4. **diner.html** : Page sur le dîner
    - Recommandations pour le repas du soir
    - Idées de repas simples
