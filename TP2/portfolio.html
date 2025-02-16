@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Akram BENHAMMOU, développeur web fullstack">
+    <title>Akram BENHAMMOU | Développeur Web Créatif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li>
+                    <a href="#home" class="nav-link" data-tooltip="Accueil">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav-link" data-tooltip="Compétences">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link" data-tooltip="Projets">
+                        <i class="fas fa-laptop-code"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link" data-tooltip="Contact">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <button class="theme-toggle"  onclick="toggleTheme()" aria-label="Changer le thème">
+                        <i class="fas fa-sun" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="img/PhotoProfil.png" alt="Photo de profil" class="hero-img">
+            <h1 class="title">Je suis Akram BENHAMMOU</h1>
+            <p class="subtitle">Développeur Web Full Stack diplômé en Informatique,<br> avec une expérience pratique dans la création d'applications web et desktop responsives.<br>
+                 Compétent à la fois en développement front-end et back-end,<br> je consacre une partie de mes recherches aux systèmes d'intelligence artificielle et aux architectures distribuées.<br>
+                J'explore activement l'intégration d'algorithmes d'IA dans les applications métiers</p>
+            <div class="social-links">
+                <a href="https://github.com/AkramBENHAMMOU-e" class="social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/akram-benhammou-a888a9221/" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:benhammou.akrm4@gmail.com" class="social-link" aria-label="Twitter" style="text-decoration: none;"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-laptop-code skill-icon"></i>
+                <h3>Language de programmation </h3>
+                <p>Java, Python, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react skill-icon"></i>
+                <h3>Frontend</h3>
+                <p>Angular, React.js, Tailwind, Bootstrap</p>
+                <p>Création d'interfaces modernes et réactives</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-node-js skill-icon"></i>
+                <h3>Backend</h3>
+                <p>spring</p>
+                <p>APIs robustes et performantes</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database skill-icon"></i>
+                <h3>Databases</h3>
+                <p>MySQL, SQLite, PostgreSQL</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <img src="img/proj1.png" alt="EmploiTempsUCD" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Generateur des emplois du temps de fsj</h3>
+                    <p class="project-description">Plateforme pour generer automatiquement les emplois du temps et aussi pour les consulter de la part des étudiants.</p>
+                    <div class="project-techs">
+                        <span class="tech-tag">Spring boot</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Algorithme génétique</span>
+                    </div>
+                    <div class="btn">
+                    <a href="https://github.com/AkramBENHAMMOU-e/pfe1.git" class="submit-btn" target="_blank">Consulter</a>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="img/EnsetGuide.png" alt="RAG chatbot ENSETGUIDE" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">RAG chatbot  ENSETGUIDE</h3>
+                    <p class="project-description">Un chatbot integrant le modele RAG pour interroger les documents de l'ENSET.</p>
+                    <div class="project-techs">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JavaFX</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="btn">
+                        <a href="https://github.com/AkramBENHAMMOU-e/Rag-chat.git" class="submit-btn" target="_blank">Consulter</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form"  action="https://formspree.io/f/xrbeywel"method="POST" accept="application/json" netlify>
+            <div class="form-group">
+                <label class="form-label" for="name">Nom</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
+            </div>
+            <button onclick="showNotification()" type="submit" class="submit-btn">Envoyer le message</button>
+        </form>
+    </section>
+
+    
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        }
+
+
+    const form = document.querySelector('.contact-form');
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('.submit-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Envoi en cours...';
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                
+                submitBtn.innerHTML = 'Message envoyé !';
+                form.reset(); 
+                
+            
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    
+                    window.location.href = '#home';
+                }, 2000);
+            } else {
+                throw new Error('Erreur lors de l\'envoi');
+            }
+        } catch (error) {
+            submitBtn.innerHTML = 'Erreur lors de l\'envoi';
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+    });
+
+
+
+const style = document.createElement('style');
+style.textContent = `
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 25px;
+        border-radius: 4px;
+        color: white;
+        z-index: 1000;
+        animation: slideIn 0.5s ease-out;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .notification.success {
+        background: var(--primary-color);
+    }
+    
+    .notification.error {
+        background: #ef4444;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+const f = document.querySelector('.contact-form');
+
+f.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Envoi en cours...';
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch(f.action, {
+            method: 'POST',
+            body: new FormData(f),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            showNotification('Message envoyé avec succès !', 'success');
+            f.reset();
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                window.location.href = '#home';
+            }, 2000);
+        } else {
+            throw new Error('Erreur lors de l\'envoi');
+        }
+    } catch (error) {
+        showNotification('Erreur lors de l\'envoi', 'error');
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    }
+});
+    </script>
+</body>
+</html>
