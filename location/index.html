@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez votre voiture facilement via WhatsApp. Large choix de véhicules, prix compétitifs, service rapide.">
+    <meta name="keywords" content="location voiture, réservation WhatsApp, location automobile, voiture à louer">
+    <title>AutoWhatsApp - Location de voitures simple et rapide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold">AutoWhatsApp</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#vehicules" class="hover:text-blue-200">Véhicules</a>
+                    <a href="#comment-ca-marche" class="hover:text-blue-200">Comment ça marche</a>
+                    <a href="#contact" class="hover:text-blue-200">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center">
+        <img src="/api/placeholder/1920/1080" alt="Voiture de luxe" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-6 relative text-white">
+            <h1 class="text-5xl font-bold mb-4">Location de voitures via WhatsApp</h1>
+            <p class="text-xl mb-8">Réservez votre véhicule en quelques clics et gérez tout via WhatsApp</p>
+            <a href="#reservation" class="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-full inline-flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Réserver maintenant
+            </a>
+        </div>
+    </header>
+
+    <!-- Comment ça marche -->
+    <section id="comment-ca-marche" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Comment ça marche ?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">1. Choisissez votre véhicule</h3>
+                    <p>Parcourez notre sélection de véhicules et choisissez celui qui vous convient</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-whatsapp text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">2. Contactez-nous sur WhatsApp</h3>
+                    <p>Cliquez sur le bouton WhatsApp et envoyez-nous les détails de votre réservation</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">3. Confirmez et profitez</h3>
+                    <p>Recevez votre confirmation et les instructions pour récupérer votre véhicule</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Véhicules -->
+    <section id="vehicules" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos véhicules disponibles</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Véhicule 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/600/400" alt="Berline de luxe" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Berline de luxe</h3>
+                        <p class="text-gray-600 mb-4">À partir de 89€/jour</p>
+                        <button onclick="window.location.href='https://wa.me/1234567890'" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full w-full">
+                            <i class="fab fa-whatsapp mr-2"></i>Réserver
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Véhicule 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/600/400" alt="SUV familial" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">SUV familial</h3>
+                        <p class="text-gray-600 mb-4">À partir de 119€/jour</p>
+                        <button onclick="window.location.href='https://wa.me/1234567890'" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full w-full">
+                            <i class="fab fa-whatsapp mr-2"></i>Réserver
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Véhicule 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/600/400" alt="Citadine économique" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Citadine économique</h3>
+                        <p class="text-gray-600 mb-4">À partir de 49€/jour</p>
+                        <button onclick="window.location.href='https://wa.me/1234567890'" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full w-full">
+                            <i class="fab fa-whatsapp mr-2"></i>Réserver
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Pourquoi nous choisir ?</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-clock text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Service 24/7</h3>
+                    <p>Assistance disponible à tout moment</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-shield-alt text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Assurance incluse</h3>
+                    <p>Véhicules entièrement assurés</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-percent text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Meilleurs prix</h3>
+                    <p>Prix compétitifs garantis</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-car text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Véhicules récents</h3>
+                    <p>Flotte régulièrement renouvelée</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Contactez-nous</h2>
+            <div class="max-w-lg mx-auto">
+                <div class="bg-green-500 text-white rounded-lg p-6 text-center mb-8">
+                    <i class="fab fa-whatsapp text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Disponible sur WhatsApp</h3>
+                    <p class="mb-4">Contactez-nous directement sur WhatsApp pour une réponse rapide</p>
+                    <a href="https://wa.me/1234567890" class="bg-white text-green-500 px-6 py-2 rounded-full inline-block hover:bg-gray-100">
+                        Démarrer la discussion
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">AutoWhatsApp</h4>
+                    <p>Location de voitures simple et rapide via WhatsApp</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Liens utiles</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">Conditions générales</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-blue-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Nous suivre</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025 AutoWhatsApp. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.querySelector('button').addEventListener('click', function() {
+            const nav = document.querySelector('.md\\:flex');
+            nav.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
