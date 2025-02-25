@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function IMC() {
+            let p = parseFloat(document.getElementById("p").value);
+            let t = parseFloat(document.getElementById("t").value);
+            let imc = p / (t * t);
+            document.getElementById("resultat").innerText = "Votre IMC est : " + imc;
+        }
+    </script>
+</head>
+<body>
+    <div style="margin: 10px;">
+        <label>poids (kg) : <input type="number" id="p"></label>
+    </div>
+    <div style="margin: 10px;">
+        <label>taille (m) : <input type="number" id="t"></label>
+    </div>
+    <div style="margin: 10px;">
+        <button style="background-color: blue; border-radius: 5px;" onclick="IMC()">Calculer IMC</button>
+    </div>
+    <div>
+        <p id="resultat"></p>
+    </div>    
+</body>
+</html>

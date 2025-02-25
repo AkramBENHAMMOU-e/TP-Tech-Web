@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function permuter() {
+            let inp1 = document.getElementById("input1");
+            let inp2 = document.getElementById("input2");
+            let t = inp1.value;
+            inp1.value = inp2.value;
+            inp2.value = t;
+        }
+    </script>
+</head>
+<body>
+    <div style = "margin: 10px;">
+        <input type="text" id="input1" >
+    </div>
+    
+    <div style = "margin: 10px;">
+        <input type="text" id="input2">
+    </div>
+    
+    <div style = "margin: 10px;">
+        <button onclick="permuter()">Permuter</button>
+    </div>
+    
+</body>
+</html>

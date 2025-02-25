@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Scientifique</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            width: 100%;
+            height: 70px;
+            margin-bottom: 20px;
+            padding: 15px;
+            font-size: 28px;
+            text-align: right;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 8px;
+        }
+
+        button {
+            height: 55px;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        /* Styles spécifiques aux types de boutons */
+        .number {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        .operator {
+            background-color: #ff9500;
+            color: white;
+        }
+
+        .function {
+            background-color: #4a4a4a;
+            color: white;
+        }
+
+        .equals {
+            background-color: #007AFF;
+            color: white;
+            grid-column: span 2;
+        }
+
+        .clear {
+            background-color: #ff3b30;
+            color: white;
+        }
+
+        .scientific {
+            background-color: #5c5c5c;
+            color: white;
+        }
+
+        button:hover {
+            filter: brightness(0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" disabled>
+        <div class="buttons">
+            <!-- Première ligne - Fonctions scientifiques -->
+            <button class="scientific" onclick="calculate('sqrt')">&radic;</button>
+            <button class="scientific" onclick="calculate('x2')">x²</button>
+            <button class="scientific" onclick="calculate('pow')">x^y</button>
+            <button class="scientific" onclick="calculate('exp')">EXP</button>
+            <button class="scientific" onclick="calculate('Inv')">1/x</button>
+
+            <!-- Deuxième ligne - Fonctions trigonométriques -->
+            <button class="scientific" onclick="calculate('sin')">sin</button>
+            <button class="scientific" onclick="calculate('cos')">cos</button>
+            <button class="scientific" onclick="calculate('tan')">tan</button>
+            <button class="scientific" onclick="calculate('e')">e</button>
+            <button class="scientific" onclick="calculate('%')">%</button>
+
+            <!-- Troisième ligne - Nombres et opérations de base -->
+            <button class="clear" onclick="clearDisplay()">CE</button>
+            <button class="function" onclick="calculate('log')">log</button>
+            <button class="function" onclick="calculate('ln')">ln</button>
+            <button class="operator" onclick="appendToDisplay('/')">&divide;</button>
+            <button class="operator" onclick="appendToDisplay('*')">&times;</button>
+            <button class="number" onclick="appendToDisplay('7')">7</button>
+            <button class="number" onclick="appendToDisplay('8')">8</button>
+            <button class="number" onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+            <button class="operator" rowspan="2" onclick="appendToDisplay('+')">+</button>
+            <button class="number" onclick="appendToDisplay('4')">4</button>
+            <button class="number" onclick="appendToDisplay('5')">5</button>
+            <button class="number" onclick="appendToDisplay('6')">6</button> 
+            <button class="number" onclick="appendToDisplay('1')">1</button>
+            <button class="number" onclick="appendToDisplay('2')">2</button>
+            <button class="number" onclick="appendToDisplay('3')">3</button>
+            <button class="equals" onclick="calculateResult()">=</button>
+            <button class="number" onclick="appendToDisplay('0')" style="grid-column: span 2;">0</button>
+            <button class="number" onclick="appendToDisplay('.')">.</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        let isNewCalculation = true;
+        
+        function appendToDisplay(value) {
+            if (isNewCalculation) {
+                display.value = '';
+                isNewCalculation = false;
+            }
+            display.value += value;
+        }
+        
+        function clearDisplay() {
+            display.value = '';
+        }
+        
+        function calculateResult() {
+            try {
+                display.value = eval(display.value);
+                isNewCalculation = true;
+            } catch (error) {
+                display.value = 'Erreur';
+                isNewCalculation = true;
+            }
+        }
+        
+        function calculate(operation) {
+            let currentValue = parseFloat(display.value);
+            
+            switch(operation) {
+                case 'sin':
+                    display.value = Math.sin(currentValue * (Math.PI / 180));
+                    break;
+                case 'cos':
+                    display.value = Math.cos(currentValue * (Math.PI / 180));
+                    break;
+                case 'tan':
+                    display.value = Math.tan(currentValue * (Math.PI / 180));
+                    break;
+                case 'Inv':
+                    display.value = 1 / currentValue;
+                    break;
+                case 'ln':
+                    display.value = Math.log(currentValue);
+                    break;
+                case 'log':
+                    display.value = Math.log10(currentValue);
+                    break;
+                case 'sqrt':
+                    display.value = Math.sqrt(currentValue);
+                    break;
+                case 'x2':
+                    display.value = Math.pow(currentValue, 2);
+                    break;
+                case 'pow':
+                    isNewCalculation = false;
+                    appendToDisplay('^');
+                    break;
+                case 'exp':
+                    display.value = Math.exp(currentValue);
+                    break;
+                case 'e':
+                    display.value = Math.E;
+                    break;
+                case '%':
+                    display.value = currentValue / 100;
+                    break;
+            }
+            
+            isNewCalculation = true;
+        }
+        
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                calculateResult();
+            }
+        });
+        
+        
+        const originalEval = window.eval;
+        window.eval = function(str) {
+            str = str.replace(/\^/g, '**');
+            return originalEval(str);
+        };
+    </script>
+</body>
+</html>
